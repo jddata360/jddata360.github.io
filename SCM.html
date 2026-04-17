@@ -1,207 +1,229 @@
 <!DOCTYPE HTML>
+<!--
+  Jayadeepa.R.M — Portfolio
+  Based on Stellar by HTML5 UP | Redesigned by Claude
+-->
 <html>
-	<head>
-		<title>SCM Analysis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<header id="header">
-				<h1>SCM Problem Solving Methods </h1>
-				<p>ABC-FSN Analysis</p>
-			</header>
+<head>
+  <title>SCM Analysis — Jayadeepa.R.M</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="jd-shared.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
 
-			<nav id="nav">
-				<ul>
-					<li><a href="index.html">Introduction</a></li>
-					<li><a href="generic.html">Professional Experience</a></li>
-					<li><a href="Certifications2.html">Certifications</a></li>
-					<li><a href="Data Analysis.html">Data Analysis Projects</a></li>
-					<li><a href="SCM.html" class="active">SCM Analysis</a></li>
-					<li><a href="AIAgent.html">AI Projects</a></li>
-					<li><a href="Hobbies.html">Hobbies</a></li>
-				</ul>
-			</nav>
+  <!-- Header -->
+  <header id="header">
+    <h1>SCM Analysis</h1>
+    <p>ABC-FSN Analysis &mdash; Grocery Inventory Classification</p>
+  </header>
 
-			<div id="main">
-				<section id="content" class="main">
-					<span class="image main"><img src="images/pic15.png" alt="" /></span>
-					<h2>About Data</h2>
-					<p> My objective here is to learn a real practical examples of supply chain problems most of this features which I had learned using different online course. I am curious in understanding the problem and then chosen this analysis. Such kind of mini projects (self made) is making to think and progress.Here I utilized open source platform to collect the raw data to analyse and build a short project. This data consists of few aspects based on the questions. <ul>
-						<li> What is the data all about ? </li>
-						<li> What are the analysis could be done from SCM perspective ? </li>
-						<li> How does the data represents the results ? </li>
-						<li> Data interpretation? </li>
-					</ul>
-					</p>
-					<h2>Results</h2>
-					<p> Grocery Data Analysis : This output provides a comprehensive analysis of a grocery data analysis, The final outcome of analysis is the ABC-FSN Matrix Heatmap, which provides a combined classification of grocery products based on both their Monetary Value (ABC) and their Movement Rate (FSN)..</p> <p> The heatmap shows the count of products that fall into each of the nine categories, with darker shades indicating a higher number of products in that group. </p>
+  <!-- Nav -->
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Introduction</a></li>
+      <li><a href="generic.html">Professional Experience</a></li>
+      <li><a href="Certifications2.html">Certifications</a></li>
+      <li><a href="Data Analysis.html">Data Analysis Projects</a></li>
+      <li><a href="SCM.html" class="active">SCM Analysis</a></li>
+      <li><a href="AIAgent.html">AI Projects</a></li>
+      <li><a href="Hobbies.html">Hobbies</a></li>
+    </ul>
+  </nav>
 
-					<section>
-						<h2>Interpreting the ABC-FSN Matrix Heatmap</h2>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Axis</th>
-										<th>Classification</th>
-										<th>Criteria</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td> Y-Axis (Rows) </td>
-										<td> ABC (A, B, C) </td>
-										<td> Based on Revenue (final_amount). A: High Value, B: Medium Value, C: Low Value </td>
-									</tr>
-									<tr>
-										<td>X-Axis (Columns)</td>
-										<td>FSN (F, S, N) </td>
-										<td>Based on Quantity Sold (quantity). F: Fast Moving, S: Slow Moving, N: Non-Moving.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section>
+  <!-- Main -->
+  <div id="main">
+    <section id="content" class="main">
 
-					<h5><p><b> Interpretation Summary Matrix </b></h5>
-					<table>
-						<thead>
-							<tr>
-								<th>ABC_Category</th>
-								<th>F</th>
-								<th>S</th>
-								<th>N</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr><td>A</td><td>9</td><td>4</td><td>0</td></tr>
-							<tr><td>B</td><td>2</td><td>0</td><td>1</td></tr>
-							<tr><td>C</td><td>0</td><td>0</td><td>2</td></tr>
-						</tbody>
-					</table>
+      <span class="image main"><img src="images/pic15.png" alt="ABC-FSN Analysis Heatmap" /></span>
 
-					The table below translates the product counts in the matrix into key strategic actions:
+      <h2>About the Data</h2>
 
-					<section>
-						<h5><b>Inventory Strategy by Category</h5></b>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Cell</th>
-										<th>Classification</th>
-										<th>Product Count</th>
-										<th>Strategic Implication</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>AF</td>
-										<td>A-Fast (High Value, Fast Moving)</td>
-										<td>9</td>
-										<td>CRITICAL FOCUS: These are the money-makers and top sellers. Implement strict control, accurate forecasting, JIT (Just-In-Time) inventory, and minimum safety stock to maximize cash flow and avoid stockouts</td>
-									</tr>
-									<tr>
-										<td>AS</td>
-										<td>A-Slow (High Value, Slow Moving)</td>
-										<td>4</td>
-										<td>MONITOR CAREFULLY: High monetary investment but slower sales. Requires management-level attention. Check for obsolescence or potential overstocking.</td>
-									</tr>
-									<tr>
-										<td>AN</td>
-										<td>A-Non-Moving (High Value, Non-Moving)</td>
-										<td>0</td>
-										<td>MAJOR ALARM: No products here is ideal. If a product fell here, it would mean high capital is tied up in items that aren't selling. Immediate action (promotion/liquidation) required.</td>
-									</tr>
-									<tr>
-										<td>BF</td>
-										<td>B-Fast (Medium Value, Fast Moving)</td>
-										<td>2</td>
-										<td>ROUTINE CONTROL: Use standard reorder points (ROP) and economic order quantity (EOQ). Automate processes, but review periodically.</td>
-									</tr>
-									<tr>
-										<td>BS</td>
-										<td>B-Slow (Medium Value, Slow Moving)</td>
-										<td>0</td>
-										<td>WATCH CLOSELY: Needs periodic review. Evaluate if they should be promoted or gradually downgraded to 'C' control.</td>
-									</tr>
-									<tr>
-										<td>BN</td>
-										<td>B-Non-Moving (Medium Value, Non-Moving)</td>
-										<td>1</td>
-										<td>PROMOTION CANDIDATE: Moderate value tied up in stagnant stock. Look for opportunities to clear stock with minor discounts.</td>
-									</tr>
-									<tr>
-										<td>CF</td>
-										<td>C-Fast (Low Value, Fast Moving)</td>
-										<td>0</td>
-										<td>SIMPLIFIED CONTROL: These are low-cost, high-volume items (e.g., staples). Use simple visual control or two-bin systems.</td>
-									</tr>
-									<tr>
-										<td>CS</td>
-										<td>C-Slow (Low Value, Slow Moving)</td>
-										<td>0</td>
-										<td>LOOSE CONTROL: Manage with minimal effort. Could be seasonal stock.</td>
-									</tr>
-									<tr>
-										<td>CN</td>
-										<td>C-Non-Moving (Low Value, Non-Moving)</td>
-										<td>2</td>
-										<td>PHASE OUT/DISPOSE: Least critical items. Consider immediate clearance, disposal, or discontinuation to free up warehouse space and reduce administrative effort.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<p>
-							<li><b>Final Decision</b></li>
-							<li>Concentration on 'AF' (9 products)</li>
-							<li>Inventory management must primarily focus on the 9 High Value, Fast Moving products (e.g., Tomatoes, Bread, Chicken Breast).</li>
-							<li>Errors here (stockouts) lead to the greatest loss of potential revenue.</li>
-							<li><b>Focus on 'CN' (2 products)</b>: Having 2 Low Value, Non-Moving products (e.g., Ground Beef, Carrots) that are tying up space without contributing much revenue. These are candidates for elimination or deep markdown.</li>
-							<li>The ABC-FSN matrix moves you from general inventory policies to item-specific, targeted strategies, leading to lower inventory costs, fewer stockouts, and improved working capital.</li>
-							<li>I had used open source tools for executing this tasks. If you need scripts please email me.</li>
-						</p>
-					</section>
-				</div>
+      <div class="jd-callout amber">
+        <div class="jd-callout-icon">💡</div>
+        <div>
+          <h4>Project Motivation</h4>
+          <p>Self-initiated mini project to learn practical SCM problem-solving using open-source data. The goal: understand ABC-FSN analysis hands-on and build the skill to apply it to real inventory scenarios.</p>
+        </div>
+      </div>
 
-			<footer id="footer">
-				<section>
-					<h2>Disclaimer</h2>
-					<p>All the information given above are worked inhouse.</p>
-					<ul class="actions">
-						<li><a href="generic.html" class="button">Learn More</a></li>
-					</ul>
-				</section>
-				<section>
-					<h2>Contact Me</h2>
-					<dl class="alt">
-						<dt>Address</dt>
-						<dd>Jayadeepa.R.M , Home Address</dd>
-						<dt>Phone</dt>
-						<dd>+91 852X822XXX</dd>
-						<dt>Email</dt>
-						<dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
-					</dl>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt" target="_blank"><span class="label">Linkedin</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-				<p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509" target="_blank">@jayadeepa1509</a></p>
-			</footer>
-		</div>
+      <p>This analysis uses open-source grocery data to answer four key questions:</p>
+      <ul>
+        <li>What is the data all about?</li>
+        <li>What SCM analyses can be performed on this data?</li>
+        <li>How does the data represent results visually?</li>
+        <li>How do we interpret the findings for action?</li>
+      </ul>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+      <h2>What is ABC-FSN Analysis?</h2>
+      <div class="feature-grid">
+        <div class="feature-card blue">
+          <span class="feature-icon">💰</span>
+          <h4>ABC Classification</h4>
+          <p>Classifies products by monetary value (revenue contribution). <strong>A = High Value</strong>, <strong>B = Medium Value</strong>, <strong>C = Low Value</strong>. Focuses inventory investment on what matters most.</p>
+        </div>
+        <div class="feature-card teal">
+          <span class="feature-icon">🔄</span>
+          <h4>FSN Classification</h4>
+          <p>Classifies products by movement rate (quantity sold). <strong>F = Fast Moving</strong>, <strong>S = Slow Moving</strong>, <strong>N = Non-Moving</strong>. Identifies stock velocity for smarter replenishment.</p>
+        </div>
+        <div class="feature-card purple">
+          <span class="feature-icon">🗺️</span>
+          <h4>Combined Matrix</h4>
+          <p>Combining both dimensions creates a 3×3 matrix — 9 strategic zones. Each zone calls for a different inventory management approach.</p>
+        </div>
+      </div>
+
+      <h2>Results — ABC-FSN Matrix</h2>
+      <p>The final outcome is a heatmap showing the count of products in each of the nine categories. Darker shades indicate higher product concentration.</p>
+
+      <h3>Axis Key</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Axis</th><th>Classification</th><th>Criteria</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Y-Axis (Rows)</strong></td>
+              <td>ABC (A, B, C)</td>
+              <td>Based on Revenue (final_amount). A = High, B = Medium, C = Low Value</td>
+            </tr>
+            <tr>
+              <td><strong>X-Axis (Columns)</strong></td>
+              <td>FSN (F, S, N)</td>
+              <td>Based on Quantity Sold. F = Fast Moving, S = Slow Moving, N = Non-Moving</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Matrix Summary</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>ABC \ FSN</th><th>F (Fast)</th><th>S (Slow)</th><th>N (Non-Moving)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A (High Value)</strong></td><td>9</td><td>4</td><td>0</td></tr>
+            <tr><td><strong>B (Medium Value)</strong></td><td>2</td><td>0</td><td>1</td></tr>
+            <tr><td><strong>C (Low Value)</strong></td><td>0</td><td>0</td><td>2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Inventory Strategy by Category</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>Cell</th><th>Classification</th><th>Count</th><th>Strategic Implication</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>AF</strong></td>
+              <td>High Value, Fast Moving</td>
+              <td>9</td>
+              <td>🚨 <strong>Critical Focus.</strong> Money-makers and top sellers. Implement strict control, accurate forecasting, JIT inventory, and minimum safety stock.</td>
+            </tr>
+            <tr>
+              <td><strong>AS</strong></td>
+              <td>High Value, Slow Moving</td>
+              <td>4</td>
+              <td>⚠️ <strong>Monitor Carefully.</strong> High monetary investment, slow sales. Management-level attention required; check for obsolescence risk.</td>
+            </tr>
+            <tr>
+              <td><strong>AN</strong></td>
+              <td>High Value, Non-Moving</td>
+              <td>0</td>
+              <td>✅ <strong>Ideal (none here).</strong> If any fell here, immediate promotion or liquidation would be required.</td>
+            </tr>
+            <tr>
+              <td><strong>BF</strong></td>
+              <td>Medium Value, Fast Moving</td>
+              <td>2</td>
+              <td>🔁 <strong>Routine Control.</strong> Use standard ROP and EOQ. Automate where possible; review periodically.</td>
+            </tr>
+            <tr>
+              <td><strong>BS</strong></td>
+              <td>Medium Value, Slow Moving</td>
+              <td>0</td>
+              <td>👀 <strong>Watch Closely.</strong> Periodic review needed; evaluate promotion or downgrade to C-level control.</td>
+            </tr>
+            <tr>
+              <td><strong>BN</strong></td>
+              <td>Medium Value, Non-Moving</td>
+              <td>1</td>
+              <td>🏷️ <strong>Promotion Candidate.</strong> Moderate value in stagnant stock; consider minor discounts to clear.</td>
+            </tr>
+            <tr>
+              <td><strong>CF</strong></td>
+              <td>Low Value, Fast Moving</td>
+              <td>0</td>
+              <td>📦 <strong>Simplified Control.</strong> Low-cost, high-volume staples. Use visual control or two-bin systems.</td>
+            </tr>
+            <tr>
+              <td><strong>CS</strong></td>
+              <td>Low Value, Slow Moving</td>
+              <td>0</td>
+              <td>🔓 <strong>Loose Control.</strong> Minimal effort needed; may be seasonal stock.</td>
+            </tr>
+            <tr>
+              <td><strong>CN</strong></td>
+              <td>Low Value, Non-Moving</td>
+              <td>2</td>
+              <td>🗑️ <strong>Phase Out.</strong> Clear, dispose, or discontinue to free warehouse space and reduce admin effort.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Final Decisions</h2>
+      <div class="jd-callout green">
+        <div class="jd-callout-icon">🎯</div>
+        <div>
+          <h4>Key Takeaways</h4>
+          <p>Concentrate on the 9 <strong>AF products</strong> (e.g., Tomatoes, Bread, Chicken Breast) — these are the primary revenue drivers where stockouts are most costly. Phase out the 2 <strong>CN products</strong> (e.g., Ground Beef, Carrots) that occupy space without contributing meaningful revenue. The ABC-FSN matrix enables item-specific, targeted strategies that lower inventory costs, reduce stockouts, and improve working capital.</p>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a href="mailto:jayadeepa.r.murugesan@gmail.com" class="button primary">Request the Scripts</a>
+        <a href="AIAgent.html" class="button">View AI SCM Agent →</a>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h2>Disclaimer</h2>
+      <p>All the information given above is worked in-house.</p>
+      <ul class="actions">
+        <li><a href="generic.html" class="button">Learn More</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <dl class="alt">
+        <dt>Address</dt><dd>Jayadeepa.R.M, Home Address</dd>
+        <dt>Phone</dt><dd>+91 852X822XXX</dd>
+        <dt>Email</dt><dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
+      </dl>
+      <ul class="icons">
+        <li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/jddata360" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section>
+    <p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
+  </footer>
+
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script data-goatcounter="https://jddata360.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
 </html>

@@ -1,0 +1,358 @@
+/* ============================================================
+   JD Portfolio — Shared Design System
+   Applies on top of the Stellar (assets/css/main.css) base
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --jd-blue:      #1a56db;
+  --jd-blue-lt:   #e8f1fb;
+  --jd-purple:    #7f77dd;
+  --jd-purple-lt: #eeedfe;
+  --jd-teal:      #1d9e75;
+  --jd-teal-lt:   #e1f5ee;
+  --jd-amber:     #ba7517;
+  --jd-amber-lt:  #faeeda;
+  --jd-green:     #639922;
+  --jd-green-lt:  #eaf3de;
+  --jd-coral:     #d85a30;
+  --jd-gray:      #5f5e5a;
+  --jd-gray-lt:   #f1efe8;
+  --jd-surface:   #f7f9fc;
+  --jd-border:    #dde3ed;
+  --jd-text:      #1c2433;
+  --jd-muted:     #6e7f96;
+  --jd-radius:    10px;
+}
+
+/* ── Base Typography ── */
+body, #wrapper {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+#header h1 {
+  font-family: 'DM Serif Display', serif !important;
+  letter-spacing: -0.01em;
+}
+
+#header p {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 400;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'DM Serif Display', serif !important;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.85em;
+}
+
+/* ── Nav — always show all links ── */
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+#nav ul li a {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  padding: 0.6em 1.1em;
+  white-space: nowrap;
+}
+
+/* ── Tech stack badges ── */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 24px;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.badge-blue   { background: var(--jd-blue-lt);   color: #185fa5; border-color: #b5d4f4; }
+.badge-purple { background: var(--jd-purple-lt);  color: #534ab7; border-color: #afa9ec; }
+.badge-teal   { background: var(--jd-teal-lt);    color: #0f6e56; border-color: #5dcaa5; }
+.badge-amber  { background: var(--jd-amber-lt);   color: #854f0b; border-color: #fac775; }
+.badge-green  { background: var(--jd-green-lt);   color: #3b6d11; border-color: #97c459; }
+.badge-gray   { background: var(--jd-gray-lt);    color: var(--jd-gray); border-color: #b4b2a9; }
+.badge-coral  { background: #fceee9;               color: #993d1e; border-color: #f4b49d; }
+
+/* ── Feature cards grid ── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.feature-card {
+  background: var(--jd-surface);
+  border: 1px solid var(--jd-border);
+  border-radius: var(--jd-radius);
+  padding: 20px 22px;
+  border-top: 3px solid;
+  transition: box-shadow 0.2s;
+}
+
+.feature-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.09); }
+
+.feature-card.blue   { border-top-color: #378add; }
+.feature-card.purple { border-top-color: var(--jd-purple); }
+.feature-card.teal   { border-top-color: var(--jd-teal); }
+.feature-card.amber  { border-top-color: var(--jd-amber); }
+.feature-card.green  { border-top-color: var(--jd-green); }
+.feature-card.coral  { border-top-color: var(--jd-coral); }
+.feature-card.gray   { border-top-color: var(--jd-gray); }
+
+.feature-card h4 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--jd-text);
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--jd-muted);
+  line-height: 1.6;
+}
+
+.feature-icon {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ── Architecture flow ── */
+.arch-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  padding: 20px 24px;
+  background: var(--jd-surface);
+  border: 1px solid var(--jd-border);
+  border-radius: var(--jd-radius);
+}
+
+.arch-step {
+  background: #fff;
+  border: 1px solid var(--jd-border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--jd-text);
+  white-space: nowrap;
+}
+
+.arch-arrow { color: var(--jd-muted); font-size: 1rem; flex-shrink: 0; }
+
+.arch-step.highlight {
+  background: var(--jd-blue-lt);
+  border-color: #b5d4f4;
+  color: #185fa5;
+}
+
+/* ── Callout boxes ── */
+.jd-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: var(--jd-radius);
+  padding: 18px 22px;
+  margin: 24px 0;
+  border: 1px solid;
+}
+
+.jd-callout.green  { background: var(--jd-green-lt);  border-color: #c0dd97; }
+.jd-callout.blue   { background: var(--jd-blue-lt);   border-color: #b5d4f4; }
+.jd-callout.amber  { background: var(--jd-amber-lt);  border-color: #fac775; }
+
+.jd-callout-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+
+.jd-callout h4 {
+  margin: 0 0 4px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.jd-callout.green  h4 { color: #27500a; }
+.jd-callout.blue   h4 { color: #0c3b78; }
+.jd-callout.amber  h4 { color: #5c3000; }
+
+.jd-callout p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+
+.jd-callout.green  p { color: #3b6d11; }
+.jd-callout.blue   p { color: #185fa5; }
+.jd-callout.amber  p { color: #854f0b; }
+
+/* ── Stat row ── */
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.stat-item {
+  background: var(--jd-surface);
+  border: 1px solid var(--jd-border);
+  border-radius: var(--jd-radius);
+  padding: 16px 22px;
+  flex: 1;
+  min-width: 130px;
+  text-align: center;
+}
+
+.stat-item .stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--jd-blue);
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.stat-item .stat-label {
+  font-size: 0.75rem;
+  color: var(--jd-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── CTA row ── */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 10px;
+}
+
+/* ── Hobby media blocks ── */
+.hobby-block {
+  margin: 32px 0;
+  padding: 24px;
+  background: var(--jd-surface);
+  border: 1px solid var(--jd-border);
+  border-radius: var(--jd-radius);
+  border-left: 4px solid var(--jd-blue);
+}
+
+.hobby-block h2 {
+  margin-top: 0;
+}
+
+.hobby-block video {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  margin: 16px 0;
+  background: #000;
+}
+
+.hobby-block .hobby-img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* ── Timeline / publication list ── */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-list li {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  background: var(--jd-surface);
+  border: 1px solid var(--jd-border);
+  border-radius: 8px;
+  border-left: 3px solid var(--jd-purple);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #2d3748;
+}
+
+.pub-list li strong { color: var(--jd-text); }
+
+/* ── Cert image grid ── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.cert-grid img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--jd-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.cert-grid img:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+  transform: translateY(-2px);
+}
+
+/* ── Table improvements ── */
+.table-wrapper table {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.88rem;
+}
+
+.table-wrapper table thead th {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ── Sub-nav buttons ── */
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 24px 0 8px;
+}
+
+/* ── Responsive ── */
+@media screen and (max-width: 736px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .stat-row     { flex-direction: column; }
+  .arch-flow    { flex-direction: column; align-items: flex-start; }
+  .hobby-block video,
+  .hobby-block .hobby-img { max-width: 100%; }
+}

@@ -1,403 +1,211 @@
 <!DOCTYPE HTML>
 <!--
-	Stellar by HTML5 UP
-	html5up.net | @jayadeepa1509
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Jayadeepa.R.M — Portfolio
+  Based on Stellar by HTML5 UP | Redesigned by Claude
 -->
 <html>
-	<head>
-		<title>AI Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* ── Tech stack badges ── */
-			.tech-badges {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 10px;
-				margin: 16px 0 24px 0;
-			}
-			.tech-badge {
-				display: inline-block;
-				padding: 6px 16px;
-				border-radius: 20px;
-				font-size: 0.78rem;
-				font-weight: 600;
-				letter-spacing: 0.04em;
-				border: 1px solid;
-			}
-			.badge-blue   { background: #e8f1fb; color: #185fa5; border-color: #b5d4f4; }
-			.badge-purple { background: #eeedfe; color: #534ab7; border-color: #afa9ec; }
-			.badge-teal   { background: #e1f5ee; color: #0f6e56; border-color: #5dcaa5; }
-			.badge-amber  { background: #faeeda; color: #854f0b; border-color: #fac775; }
-			.badge-green  { background: #eaf3de; color: #3b6d11; border-color: #97c459; }
-			.badge-gray   { background: #f1efe8; color: #5f5e5a; border-color: #b4b2a9; }
+<head>
+  <title>AI Projects — Jayadeepa.R.M</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="jd-shared.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
 
-			/* ── Feature cards grid ── */
-			.feature-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-				gap: 18px;
-				margin: 24px 0;
-			}
-			.feature-card {
-				background: #f7f9fc;
-				border: 1px solid #dde3ed;
-				border-radius: 10px;
-				padding: 20px 22px;
-				border-top: 3px solid;
-				transition: box-shadow 0.2s;
-			}
-			.feature-card:hover {
-				box-shadow: 0 4px 16px rgba(0,0,0,0.09);
-			}
-			.feature-card.blue   { border-top-color: #378add; }
-			.feature-card.purple { border-top-color: #7f77dd; }
-			.feature-card.teal   { border-top-color: #1d9e75; }
-			.feature-card.amber  { border-top-color: #ba7517; }
-			.feature-card.green  { border-top-color: #639922; }
-			.feature-card.coral  { border-top-color: #d85a30; }
-			.feature-card h4 {
-				margin: 0 0 8px 0;
-				font-size: 0.95rem;
-				font-weight: 700;
-				color: #1c2433;
-			}
-			.feature-card p {
-				margin: 0;
-				font-size: 0.84rem;
-				color: #6e7f96;
-				line-height: 1.6;
-			}
-			.feature-icon {
-				font-size: 1.4rem;
-				margin-bottom: 10px;
-				display: block;
-			}
+  <!-- Header -->
+  <header id="header">
+    <h1>AI Projects</h1>
+    <p>SCM Analyst Agent &mdash; Powered by Llama 3.1 &amp; Local AI</p>
+  </header>
 
-			/* ── Architecture flow ── */
-			.arch-flow {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				gap: 8px;
-				margin: 20px 0;
-				padding: 20px 24px;
-				background: #f7f9fc;
-				border: 1px solid #dde3ed;
-				border-radius: 10px;
-			}
-			.arch-step {
-				background: #ffffff;
-				border: 1px solid #dde3ed;
-				border-radius: 8px;
-				padding: 10px 16px;
-				font-size: 0.82rem;
-				font-weight: 600;
-				color: #1c2433;
-				white-space: nowrap;
-			}
-			.arch-arrow {
-				color: #6e7f96;
-				font-size: 1rem;
-				flex-shrink: 0;
-			}
-			.arch-step.highlight {
-				background: #e8f1fb;
-				border-color: #b5d4f4;
-				color: #185fa5;
-			}
+  <!-- Nav -->
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Introduction</a></li>
+      <li><a href="generic.html">Professional Experience</a></li>
+      <li><a href="Certifications2.html">Certifications</a></li>
+      <li><a href="Data Analysis.html">Data Analysis Projects</a></li>
+      <li><a href="SCM.html">SCM Analysis</a></li>
+      <li><a href="AIAgent.html" class="active">AI Projects</a></li>
+      <li><a href="Hobbies.html">Hobbies</a></li>
+    </ul>
+  </nav>
 
-			/* ── Privacy callout ── */
-			.privacy-callout {
-				display: flex;
-				align-items: flex-start;
-				gap: 16px;
-				background: #eaf3de;
-				border: 1px solid #c0dd97;
-				border-radius: 10px;
-				padding: 18px 22px;
-				margin: 24px 0;
-			}
-			.privacy-callout-icon {
-				font-size: 1.5rem;
-				flex-shrink: 0;
-				margin-top: 2px;
-			}
-			.privacy-callout h4 {
-				margin: 0 0 4px 0;
-				font-size: 0.92rem;
-				font-weight: 700;
-				color: #27500a;
-			}
-			.privacy-callout p {
-				margin: 0;
-				font-size: 0.83rem;
-				color: #3b6d11;
-				line-height: 1.6;
-			}
+  <!-- Main -->
+  <div id="main">
+    <section id="content" class="main">
 
-			/* ── Stat highlight row ── */
-			.stat-row {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 14px;
-				margin: 22px 0;
-			}
-			.stat-item {
-				background: #f7f9fc;
-				border: 1px solid #dde3ed;
-				border-radius: 10px;
-				padding: 16px 22px;
-				flex: 1;
-				min-width: 140px;
-				text-align: center;
-			}
-			.stat-item .stat-num {
-				font-size: 1.6rem;
-				font-weight: 800;
-				color: #0969da;
-				display: block;
-			}
-			.stat-item .stat-label {
-				font-size: 0.75rem;
-				color: #6e7f96;
-				text-transform: uppercase;
-				letter-spacing: 0.08em;
-				margin-top: 4px;
-				display: block;
-			}
+      <!-- Hero image — replace pic05.jpg with your own screenshot once ready -->
+      <span class="image main"><img src="images/pic05.jpg" alt="SCM Analyst AI Agent Dashboard" /></span>
 
-			/* ── CTA buttons ── */
-			.cta-row {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 12px;
-				margin: 28px 0 10px 0;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+      <!-- SECTION 1: About -->
+      <h2>About the Project</h2>
+      <p>
+        This project is a fully self-built <strong>AI-powered Supply Chain Management Analyst</strong> — a desktop application that lets you load any CSV dataset and have a natural language conversation with your data using <strong>Llama 3.1</strong>, running entirely on your local machine via Ollama. No API keys, no internet connection, no cloud. Your data stays private.
+      </p>
+      <p>
+        The motivation behind this project was to go beyond static dashboards and explore how <strong>Large Language Models (LLMs)</strong> can be embedded into real-world analytical workflows. As a Supply Chain professional, I wanted a tool that a non-technical manager could open, upload a CSV, and immediately get intelligent insights — without writing a single line of code.
+      </p>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+      <!-- Privacy callout -->
+      <div class="jd-callout green">
+        <div class="jd-callout-icon">🔒</div>
+        <div>
+          <h4>100% Local — No Data Leaves Your Machine</h4>
+          <p>Llama 3.1 runs on your hardware via Ollama. No data is sent to OpenAI, Anthropic, or any cloud provider. This is a key advantage for enterprise SCM environments where data confidentiality is non-negotiable.</p>
+        </div>
+      </div>
 
-			<!-- Header -->
-			<header id="header">
-				<h1>AI Projects</h1>
-				<p>SCM Analyst Agent &mdash; Powered by Llama 3.1 &amp; Local AI</p>
-			</header>
+      <!-- Stats row -->
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-num">1,500+</span>
+          <span class="stat-label">Lines of Python</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Dashboard Panels</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Llama 3.1</span>
+          <span class="stat-label">Local LLM Engine</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Cloud Dependency</span>
+        </div>
+      </div>
 
-			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li><a href="index.html">Introduction</a></li>
-					<li><a href="generic.html">Professional Experience</a></li>
-					<li><a href="Certifications2.html">Certifications</a></li>
-					<li><a href="Data Analysis.html">Data Analysis Projects</a></li>
-					<li><a href="SCM.html">SCM Analysis</a></li>
-					<li><a href="AIAgent.html" class="active">AI Projects</a></li>
-					<li><a href="Hobbies.html">Hobbies</a></li>
-				</ul>
-			</nav>
+      <!-- SECTION 2: Tech Stack -->
+      <h2>Tech Stack</h2>
+      <p>Built entirely in Python using open-source tools. The stack was chosen to maximise performance on consumer hardware while keeping setup simple — a single <code>pip install</code> and <code>ollama pull</code> is all that's needed.</p>
 
-			<!-- Main -->
-			<div id="main">
+      <div class="tech-badges">
+        <span class="tech-badge badge-blue">Python 3.11</span>
+        <span class="tech-badge badge-purple">Llama 3.1 (Ollama)</span>
+        <span class="tech-badge badge-teal">NiceGUI</span>
+        <span class="tech-badge badge-amber">Plotly</span>
+        <span class="tech-badge badge-green">Pandas</span>
+        <span class="tech-badge badge-gray">FastAPI / Starlette</span>
+        <span class="tech-badge badge-blue">asyncio</span>
+        <span class="tech-badge badge-purple">JetBrains Mono</span>
+      </div>
 
-				<section id="content" class="main">
+      <!-- SECTION 3: Architecture -->
+      <h2>How It Works</h2>
+      <p>
+        The agent follows a straightforward pipeline: the user uploads a CSV file, which Pandas parses into a dataframe. A statistical summary is automatically compiled and injected into the system prompt sent to Llama 3.1. The model reasons over this context and returns insights in natural language, streamed token-by-token back into the chat UI.
+      </p>
 
-					<!-- Hero image placeholder — replace pic05.jpg with your own screenshot -->
-					<span class="image main"><img src="images/pic05.jpg" alt="SCM Analyst AI Agent Dashboard" /></span>
+      <div class="arch-flow">
+        <div class="arch-step">CSV Upload</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">Pandas Parser</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">Auto KPI Engine</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step highlight">Llama 3.1 (Local)</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-step">Streamed Chat Response</div>
+      </div>
 
-					<!-- ── SECTION 1: About ── -->
-					<h2>About the Project</h2>
-					<p>
-						This project is a fully self-built <strong>AI-powered Supply Chain Management Analyst</strong> — a desktop application that lets you load any CSV dataset and have a natural language conversation with your data using <strong>Llama 3.1</strong>, running entirely on your local machine via Ollama. No API keys, no internet connection, no cloud. Your data stays private.
-					</p>
-					<p>
-						The motivation behind this project was to go beyond static dashboards and explore how <strong>Large Language Models (LLMs)</strong> can be embedded into real-world analytical workflows. As a Supply Chain professional, I wanted a tool that a non-technical manager could open, upload a CSV, and immediately get intelligent insights — without writing a single line of code.
-					</p>
+      <p>All processing happens locally. NiceGUI handles the real-time browser-based UI on <code>localhost:8080</code>. Plotly renders interactive charts on the fly, and a linear regression model powers the demand forecasting panel.</p>
 
-					<!-- Privacy callout -->
-					<div class="privacy-callout">
-						<div class="privacy-callout-icon">&#128274;</div>
-						<div>
-							<h4>100% Local &mdash; No Data Leaves Your Machine</h4>
-							<p>Llama 3.1 runs on your hardware via Ollama. No data is sent to OpenAI, Anthropic, or any cloud provider. This is a key advantage for enterprise SCM environments where data confidentiality is non-negotiable.</p>
-						</div>
-					</div>
+      <!-- SECTION 4: Features -->
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card blue">
+          <span class="feature-icon">💬</span>
+          <h4>AI Chat Interface</h4>
+          <p>Ask Llama 3.1 anything about your loaded dataset in plain English. The agent understands SCM-specific queries: profitability, demand patterns, supplier ranking, margin analysis, and more.</p>
+        </div>
+        <div class="feature-card purple">
+          <span class="feature-icon">📊</span>
+          <h4>Auto KPI Dashboard</h4>
+          <p>On file load, the agent automatically detects numeric columns and generates KPI stat cards — total revenue, order counts, average values — with zero manual configuration required.</p>
+        </div>
+        <div class="feature-card teal">
+          <span class="feature-icon">🔍</span>
+          <h4>Data Explorer</h4>
+          <p>Select any two columns and chart type (bar, line, scatter) to instantly generate interactive Plotly visualisations — designed for ad-hoc exploratory analysis with no code.</p>
+        </div>
+        <div class="feature-card amber">
+          <span class="feature-icon">📈</span>
+          <h4>Demand Forecasting</h4>
+          <p>Select any numeric metric and run a linear regression forecast. The agent projects future values and plots the trend line alongside historical data for quick planning decisions.</p>
+        </div>
+        <div class="feature-card green">
+          <span class="feature-icon">👥</span>
+          <h4>Supplier Scorecards</h4>
+          <p>The sidebar automatically generates per-supplier performance cards with spend, order count, performance scores, and colour-coded risk badges (Reliable / Watch / At Risk).</p>
+        </div>
+        <div class="feature-card coral">
+          <span class="feature-icon">📋</span>
+          <h4>Pre-built SCM Queries</h4>
+          <p>A panel of pre-built questions (most profitable products, discount impact, top suppliers, demand trends) that fire instantly against your data — ideal for leadership-ready summaries.</p>
+        </div>
+      </div>
 
-					<!-- Stats row -->
-					<div class="stat-row">
-						<div class="stat-item">
-							<span class="stat-num">1,500+</span>
-							<span class="stat-label">Lines of Python</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">6</span>
-							<span class="stat-label">Dashboard Panels</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">Llama 3.1</span>
-							<span class="stat-label">Local LLM Engine</span>
-						</div>
-						<div class="stat-item">
-							<span class="stat-num">0</span>
-							<span class="stat-label">Cloud Dependency</span>
-						</div>
-					</div>
+      <!-- SECTION 5: What I Learned -->
+      <h2>What I Learned</h2>
+      <p>This project pushed me into territory well beyond standard data analysis. Building a local LLM application required understanding prompt engineering, async token streaming, and stateful multi-panel UI design in Python. Key learnings include:</p>
+      <ul>
+        <li>Prompt engineering for domain-specific LLM reasoning (SCM context injection)</li>
+        <li>Asynchronous streaming with <code>asyncio</code> and <code>threading.Queue</code> for real-time chat</li>
+        <li>Building reactive UIs with NiceGUI and handling live state across panels</li>
+        <li>Linear regression forecasting with Plotly visualisation integration</li>
+        <li>Designing a production-quality UI/UX in pure Python — no HTML/CSS/JS required</li>
+        <li>Packaging a local LLM app for non-technical end users with a one-command startup</li>
+      </ul>
 
-					<!-- ── SECTION 2: Tech Stack ── -->
-					<h2>Tech Stack</h2>
-					<p>
-						This project was built entirely in Python using open-source tools. The stack was chosen to maximise performance on consumer hardware while keeping the setup simple — a single <code>pip install</code> and <code>ollama pull</code> is all that's needed.
-					</p>
-					<div class="tech-badges">
-						<span class="tech-badge badge-blue">Python 3.11</span>
-						<span class="tech-badge badge-purple">Llama 3.1 (Ollama)</span>
-						<span class="tech-badge badge-teal">NiceGUI</span>
-						<span class="tech-badge badge-amber">Plotly</span>
-						<span class="tech-badge badge-green">Pandas</span>
-						<span class="tech-badge badge-gray">FastAPI / Starlette</span>
-						<span class="tech-badge badge-blue">asyncio</span>
-						<span class="tech-badge badge-purple">JetBrains Mono</span>
-					</div>
+      <!-- SECTION 6: CTA -->
+      <h2>View the Code</h2>
+      <p>The full source code is available on GitHub. To run it locally, you'll need Python 3.11+, Ollama installed, and the Llama 3.1 model pulled. Full setup instructions are in the repository README.</p>
 
-					<!-- ── SECTION 3: Architecture ── -->
-					<h2>How It Works</h2>
-					<p>
-						The agent follows a straightforward pipeline: the user uploads a CSV file, which Pandas parses into a dataframe. A statistical summary of the data is automatically compiled and injected into the system prompt sent to Llama 3.1. The model reasons over this context and returns insights in natural language, which are streamed token-by-token back into the chat UI.
-					</p>
+      <div class="cta-row">
+        <a href="https://github.com/jddata360" target="_blank" class="button primary">View on GitHub</a>
+        <a href="mailto:jayadeepa.r.murugesan@gmail.com" class="button">Contact Me</a>
+      </div>
 
-					<div class="arch-flow">
-						<div class="arch-step">CSV Upload</div>
-						<div class="arch-arrow">&#8594;</div>
-						<div class="arch-step">Pandas Parser</div>
-						<div class="arch-arrow">&#8594;</div>
-						<div class="arch-step">Auto KPI Engine</div>
-						<div class="arch-arrow">&#8594;</div>
-						<div class="arch-step highlight">Llama 3.1 (Local)</div>
-						<div class="arch-arrow">&#8594;</div>
-						<div class="arch-step">Streamed Chat Response</div>
-					</div>
+    </section>
+  </div>
 
-					<p>
-						All processing happens locally. The NiceGUI framework handles the real-time browser-based UI, serving the application on <code>localhost:8080</code>. Plotly renders interactive charts on the fly based on column selection, and a linear regression model powers the demand forecasting panel.
-					</p>
+  <!-- Footer -->
+  <footer id="footer">
+    <section>
+      <h2>Disclaimer</h2>
+      <p>All the information given above is worked in-house. The SCM Agent runs entirely on local hardware using open-source tools.</p>
+      <ul class="actions">
+        <li><a href="generic.html" class="button">Learn More</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact Me</h2>
+      <dl class="alt">
+        <dt>Address</dt><dd>Jayadeepa.R.M, Home Address</dd>
+        <dt>Phone</dt><dd>+91 852X822XXX</dd>
+        <dt>Email</dt><dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
+      </dl>
+      <ul class="icons">
+        <li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/jddata360" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section>
+    <p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
+  </footer>
 
-					<!-- ── SECTION 4: Features ── -->
-					<h2>Key Features</h2>
-
-					<div class="feature-grid">
-
-						<div class="feature-card blue">
-							<span class="feature-icon">&#128172;</span>
-							<h4>AI Chat Interface</h4>
-							<p>Ask Llama 3.1 anything about your loaded dataset in plain English. The agent understands SCM-specific queries: profitability, demand patterns, supplier ranking, margin analysis, and more.</p>
-						</div>
-
-						<div class="feature-card purple">
-							<span class="feature-icon">&#128202;</span>
-							<h4>Auto KPI Dashboard</h4>
-							<p>On file load, the agent automatically detects numeric columns and generates KPI stat cards — total revenue, order counts, average values — with zero manual configuration required.</p>
-						</div>
-
-						<div class="feature-card teal">
-							<span class="feature-icon">&#128269;</span>
-							<h4>Data Explorer</h4>
-							<p>Select any two columns and chart type (bar, line, scatter) to instantly generate interactive Plotly visualisations. Designed for ad-hoc exploratory analysis with no code.</p>
-						</div>
-
-						<div class="feature-card amber">
-							<span class="feature-icon">&#128200;</span>
-							<h4>Demand Forecasting</h4>
-							<p>Select any numeric metric and run a linear regression forecast. The agent projects future values and plots the trend line alongside historical data for quick planning decisions.</p>
-						</div>
-
-						<div class="feature-card green">
-							<span class="feature-icon">&#128101;</span>
-							<h4>Supplier Scorecards</h4>
-							<p>The sidebar automatically generates per-supplier performance cards with spend, order count, performance scores, and colour-coded risk badges (Reliable / Watch / At Risk).</p>
-						</div>
-
-						<div class="feature-card coral">
-							<span class="feature-icon">&#128203;</span>
-							<h4>Pre-built SCM Queries</h4>
-							<p>A panel of pre-built questions (most profitable products, discount impact, top suppliers, demand trends) that fire instantly against your data — ideal for leadership-ready summaries.</p>
-						</div>
-
-					</div>
-
-					<!-- ── SECTION 5: What I Learned ── -->
-					<h2>What I Learned</h2>
-					<p>
-						This project pushed me into territory well beyond standard data analysis. Building a local LLM application required understanding how to craft effective system prompts, how to stream tokens asynchronously using <code>asyncio</code>, and how to design a stateful multi-panel UI in a Python-native framework. Key learnings include:
-					</p>
-					<ul>
-						<li>Prompt engineering for domain-specific LLM reasoning (SCM context injection)</li>
-						<li>Asynchronous streaming with <code>asyncio</code> and <code>threading.Queue</code> for real-time chat</li>
-						<li>Building reactive UIs with NiceGUI and handling live state across panels</li>
-						<li>Linear regression forecasting with Plotly visualisation integration</li>
-						<li>Designing a production-quality UI/UX in pure Python (no HTML/CSS/JS required)</li>
-						<li>Packaging a local LLM app for non-technical end users with one-command startup</li>
-					</ul>
-
-					<!-- ── SECTION 6: CTA ── -->
-					<h2>View the Code</h2>
-					<p>
-						The full source code is available on GitHub. If you would like to run it locally, you will need Python 3.11+, Ollama installed, and the Llama 3.1 model pulled. Full setup instructions are in the repository README.
-					</p>
-					<div class="cta-row">
-						<a href="https://github.com/jddata360" target="_blank" class="button primary">View on GitHub</a>
-						<a href="mailto:jayadeepa.r.murugesan@gmail.com" class="button">Contact Me</a>
-					</div>
-
-				</section>
-
-			</div>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<section>
-					<h2>Disclaimer</h2>
-					<p>All the information given above is worked in-house. The SCM Agent runs entirely on local hardware using open-source tools.</p>
-					<ul class="actions">
-						<li><a href="generic.html" class="button">Learn More</a></li>
-					</ul>
-				</section>
-				<section>
-					<h2>Contact Me</h2>
-					<dl class="alt">
-						<dt>Address</dt>
-						<dd>Jayadeepa.R.M , Home Address</dd>
-						<dt>Phone</dt>
-						<dd>+91 852X822XXX</dd>
-						<dt>Email</dt>
-						<dd><a href="#">jayadeepa.r.murugesan@gmail.com</a></dd>
-					</dl>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">Linkedin</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-				<p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
-			</footer>
-
-		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
-	</body>
-	<script data-goatcounter="https://jddata360.goatcounter.com/count"
-	        async src="//gc.zgo.at/count.js"></script>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script data-goatcounter="https://jddata360.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
 </html>
