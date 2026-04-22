@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<!--
+    Jayadeepa.R.M — Portfolio
+    Based on Stellar by HTML5 UP | Redesigned by Claude
+-->
+<html>
+<head>
+    <title>Power BI Data Analysis — Jayadeepa.R.M</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="jd-shared.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* ══════════════════════════════════════════
+           NAV — match main page exactly (mixed case,
+           single row, same font size & weight)
+        ══════════════════════════════════════════ */
+        #nav ul li a {
+            text-transform: none !important;   /* removes ALL CAPS — matches main page */
+            font-size: 0.875rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0 !important;
+            white-space: nowrap !important;
+        }
+
+        /* ══════════════════════════════════════════
+           CALLOUT BOX
+        ══════════════════════════════════════════ */
+        .pb-callout {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            background: rgba(111,195,223,0.08);
+            border-left: 4px solid #6fc3df;
+            border-radius: 0 8px 8px 0;
+            padding: 1.2em 1.4em;
+            margin: 1em 0 1.5em;
+        }
+        .pb-callout-icon { font-size: 1.5em; line-height: 1.3; flex-shrink: 0; }
+        .pb-callout h4   { margin: 0 0 0.3em; font-size: 1rem; font-weight: 700; }
+        .pb-callout p    { margin: 0; font-size: 0.95em; line-height: 1.65; }
+
+        /* ══════════════════════════════════════════
+           PILL BADGES
+        ══════════════════════════════════════════ */
+        .pb-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin: 0.6em 0 1.6em;
+        }
+        .pb-badge {
+            display: inline-block;
+            padding: 0.35em 0.9em;
+            border-radius: 2em;
+            font-size: 0.8em;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .pb-badge.blue   { background: rgba(111,195,223,0.12); color: #6fc3df; border: 1px solid rgba(111,195,223,0.3); }
+        .pb-badge.purple { background: rgba(167,139,250,0.12); color: #a78bfa; border: 1px solid rgba(167,139,250,0.3); }
+        .pb-badge.teal   { background: rgba(52,211,153,0.12);  color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+        .pb-badge.amber  { background: rgba(251,191,36,0.12);  color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+        .pb-badge.gray   { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.15); }
+
+        /* ══════════════════════════════════════════
+           KPI GRID
+        ══════════════════════════════════════════ */
+        .pb-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        @media screen and (max-width: 736px) {
+            .pb-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .pb-kpi-card {
+            background: rgba(111,195,223,0.08);
+            border: 1px solid rgba(111,195,223,0.3);
+            border-radius: 8px;
+            padding: 1.3em 1em 1.1em;
+            text-align: center;
+        }
+        .pb-kpi-card .pb-num {
+            display: block;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #6fc3df;
+            line-height: 1;
+            margin-bottom: 0.3em;
+        }
+        .pb-kpi-card .pb-lbl {
+            display: block;
+            font-size: 0.7em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.65;
+        }
+
+        /* ══════════════════════════════════════════
+           VIZ CARDS — 3 column
+        ══════════════════════════════════════════ */
+        .pb-viz-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        @media screen and (max-width: 736px) {
+            .pb-viz-grid  { grid-template-columns: 1fr; }
+            .pb-feat-grid { grid-template-columns: 1fr; }
+        }
+        .pb-viz-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-top: 3px solid transparent;
+            border-radius: 8px;
+            padding: 1.2em 1.1em;
+        }
+        .pb-viz-card.c1 { border-top-color: #6fc3df; }
+        .pb-viz-card.c2 { border-top-color: #a78bfa; }
+        .pb-viz-card.c3 { border-top-color: #34d399; }
+        .pb-viz-card h4 {
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0 0 0.6em;
+        }
+        .pb-viz-card p  { font-size: 0.9em; line-height: 1.65; margin: 0; }
+
+        /* ══════════════════════════════════════════
+           FEATURE CARDS — 3 column (bottom row)
+        ══════════════════════════════════════════ */
+        .pb-feat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        .pb-feat-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px;
+            padding: 1.4em 1.2em;
+        }
+        .pb-feat-card .pb-icon { font-size: 1.7em; display: block; margin-bottom: 0.5em; }
+        .pb-feat-card h4       { font-size: 0.95em; font-weight: 700; margin: 0 0 0.4em; }
+        .pb-feat-card p        { font-size: 0.9em; line-height: 1.65; margin: 0; }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Data Analysis — Power BI</h1>
+        <p>Netflix Data Analysis</p>
+    </header>
+
+    <!-- Nav — identical text casing to main page -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="generic.html">Professional Experience</a></li>
+            <li><a href="Certifications2.html">Certifications</a></li>
+            <li><a href="Data Analysis.html" class="active">Data Analysis Projects</a></li>
+            <li><a href="SCM.html">SCM Analysis</a></li>
+            <li><a href="AIAgent.html">AI Projects</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section id="content" class="main">
+
+            <span class="image main">
+                <img src="images/pic05.png" alt="Power BI Netflix Dashboard" />
+            </span>
+
+            <!-- ── About ── -->
+            <h2>About the Data</h2>
+
+            <div class="pb-callout">
+                <div class="pb-callout-icon">📊</div>
+                <div>
+                    <h4>Project Goal</h4>
+                    <p>My objective here is to utilise most Power BI features which I had learned using different online courses. I am curious about curating data and analysis. Such mini projects (self-made) allow me to think and progress. As part of my job I do regular data analysis and visualization, however I felt this isn't enough to showcase my talent. Hence I utilised an open-source platform to collect raw data to analyse and build a dashboard.</p>
+                </div>
+            </div>
+
+            <p>This dashboard is built around four core questions:</p>
+
+            <div class="pb-badges">
+                <span class="pb-badge blue">What is the data about?</span>
+                <span class="pb-badge purple">How can it be categorised?</span>
+                <span class="pb-badge teal">Are there dependencies within categories?</span>
+                <span class="pb-badge amber">What is the outcome?</span>
+            </div>
+
+            <!-- ── Results ── -->
+            <h2>Results</h2>
+            <p>This dashboard provides a comprehensive analysis of a Netflix dataset, covering key metrics and trends related to shows and movies. The design is clean, with a dark theme and prominent visuals that make the data easy to interpret.</p>
+
+            <!-- ── KPIs ── -->
+            <h3>Key Performance Indicators</h3>
+            <p>The top row of the dashboard presents high-level summary statistics, providing an immediate overview of the entire dataset.</p>
+
+            <div class="pb-kpi-grid">
+                <div class="pb-kpi-card">
+                    <span class="pb-num">8,800</span>
+                    <span class="pb-lbl">Total Shows</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">19</span>
+                    <span class="pb-lbl">Total Ratings</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">515</span>
+                    <span class="pb-lbl">Genre Shows</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">4,527</span>
+                    <span class="pb-lbl">Total Directors</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">1925</span>
+                    <span class="pb-lbl">Start Year</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">2021</span>
+                    <span class="pb-lbl">End Year</span>
+                </div>
+            </div>
+
+            <!-- ── Middle Row ── -->
+            <h3>Visualizations — Middle Row</h3>
+            <p>Three bar charts that break down the data by key categories.</p>
+
+            <div class="pb-viz-grid">
+                <div class="pb-viz-card c1">
+                    <h4>Rating by Total Shows</h4>
+                    <p>A horizontal bar chart showing distribution by maturity rating. <strong>TV-MA</strong> leads, followed by TV-14 and TV-PG — indicating that a significant portion of the Netflix library is geared toward mature audiences.</p>
+                </div>
+                <div class="pb-viz-card c2">
+                    <h4>Genres by Total Shows</h4>
+                    <p><strong>Dramas &amp; International Movies</strong> is the leading genre, followed by Documentaries and Stand-Up Comedy — reflecting a strong presence of non-fiction and comedic content on the platform.</p>
+                </div>
+                <div class="pb-viz-card c3">
+                    <h4>Genres by Duration</h4>
+                    <p>Total duration per rating category — offering another view of content volume distribution that goes beyond simple title count.</p>
+                </div>
+            </div>
+
+            <!-- ── Bottom Row ── -->
+            <h3>Visualizations — Bottom Row</h3>
+            <p>Geographical distribution and time-series analysis providing deeper context.</p>
+
+            <div class="pb-feat-grid">
+                <div class="pb-feat-card">
+                    <span class="pb-icon">🗺️</span>
+                    <h4>Total Shows by Country</h4>
+                    <p>A world map with darker red shading for higher content concentration. <strong>USA and India</strong> lead — reflecting Netflix's key markets and largest content libraries.</p>
+                </div>
+                <div class="pb-feat-card">
+                    <span class="pb-icon">🍩</span>
+                    <h4>Movies vs. TV Shows</h4>
+                    <p>Donut chart breakdown: <strong>6.13K Movies (69.62%)</strong> vs. 2.68K TV Shows (30.38%). Netflix's library is firmly film-dominant.</p>
+                </div>
+                <div class="pb-feat-card">
+                    <span class="pb-icon">📈</span>
+                    <h4>Total Shows by Release Year</h4>
+                    <p>Line chart from 1940–2020 showing slow growth until the 2000s, then explosive acceleration — peaking in <strong>2018 with 767 releases</strong>, reflecting Netflix's aggressive content strategy.</p>
+                </div>
+            </div>
+
+            <!-- ── Tools ── -->
+            <h3>Tools Used</h3>
+            <div class="pb-badges">
+                <span class="pb-badge blue">Power BI Desktop</span>
+                <span class="pb-badge purple">DAX</span>
+                <span class="pb-badge teal">Power Query</span>
+                <span class="pb-badge amber">Open-Source Dataset</span>
+                <span class="pb-badge gray">Data Modelling</span>
+            </div>
+
+            <!-- ── Explore More ── -->
+            <h3>Explore More Projects</h3>
+            <ul class="actions">
+                <li><a href="Data Analysis.html" class="button primary">Excel</a></li>
+                <li><a href="PowerBI%20Data%20Analysis.html" class="button primary">Power BI</a></li>
+                <li><a href="SCM.html" class="button primary">SCM Analysis</a></li>
+                <li><a href="AIAgent.html" class="button primary">AI Projects</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>Disclaimer</h2>
+            <p>All the information given above is worked in-house.</p>
+            <ul class="actions">
+                <li><a href="generic.html" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>Jayadeepa.R.M, Home Address</dd>
+                <dt>Phone</dt>
+                <dd>+91 852X822XXX</dd>
+                <dt>Email</dt>
+                <dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/jddata360" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
+        <p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script data-goatcounter="https://jddata360.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
