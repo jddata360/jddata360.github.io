@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<!--
+    Jayadeepa.R.M — Portfolio
+    Based on Stellar by HTML5 UP | Redesigned by Claude
+-->
+<html>
+<head>
+    <title>Power BI Data Analysis — Jayadeepa.R.M</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="jd-shared.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* ── Page-scoped additions that don't conflict with jd-shared.css ── */
+
+        /* KPI stat row — same pattern as generic.html feature-grid */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1.5em 0 2em;
+        }
+        @media screen and (max-width: 736px) {
+            .kpi-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        .kpi-box {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.2em 1em;
+            text-align: center;
+        }
+        .kpi-box .kpi-num {
+            display: block;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 0.2em;
+        }
+        .kpi-box .kpi-label {
+            font-size: 0.72em;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.45);
+        }
+
+        /* Viz cards — reusing the same look as feature-card */
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        .viz-card {
+            background: rgba(255,255,255,0.04);
+            border-left: 3px solid rgba(255,255,255,0.15);
+            border-radius: 0 8px 8px 0;
+            padding: 1.2em 1.4em;
+        }
+        .viz-card.highlight { border-left-color: #6fc3df; }
+        .viz-card.highlight2 { border-left-color: #a78bfa; }
+        .viz-card.highlight3 { border-left-color: #34d399; }
+        .viz-card h4 {
+            font-size: 0.85em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin: 0 0 0.5em;
+        }
+        .viz-card p {
+            font-size: 0.88em;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.6);
+            margin: 0;
+        }
+        .viz-card strong { color: rgba(255,255,255,0.9); }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Data Analysis — Power BI</h1>
+        <p>Netflix Data Analysis</p>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="generic.html">Professional Experience</a></li>
+            <li><a href="Certifications2.html">Certifications</a></li>
+            <li><a href="Data Analysis.html" class="active">Data Analysis Projects</a></li>
+            <li><a href="SCM.html">SCM Analysis</a></li>
+            <li><a href="AIAgent.html">AI Projects</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section id="content" class="main">
+
+            <span class="image main"><img src="images/pic05.png" alt="Power BI Netflix Dashboard" /></span>
+
+            <!-- ── About ── -->
+            <h2>About the Data</h2>
+
+            <div class="jd-callout blue">
+                <div class="jd-callout-icon">📊</div>
+                <div>
+                    <h4>Project Goal</h4>
+                    <p>Utilise most Power BI features learned through online courses to curate, analyse, and visualise an open-source Netflix dataset — going beyond day-to-day work to build something that fully showcases analytical capability.</p>
+                </div>
+            </div>
+
+            <p>This dashboard is built around four core questions:</p>
+
+            <div class="tech-badges">
+                <span class="tech-badge badge-blue">What is the data about?</span>
+                <span class="tech-badge badge-purple">How can it be categorised?</span>
+                <span class="tech-badge badge-teal">Are there dependencies within categories?</span>
+                <span class="tech-badge badge-amber">What is the outcome?</span>
+            </div>
+
+            <!-- ── KPIs ── -->
+            <h2>Key Performance Indicators</h2>
+            <p>The top row of the dashboard presents high-level summary statistics — an immediate overview of the entire dataset.</p>
+
+            <div class="kpi-row">
+                <div class="kpi-box">
+                    <span class="kpi-num">8,800</span>
+                    <span class="kpi-label">Total Shows</span>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">19</span>
+                    <span class="kpi-label">Total Ratings</span>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">515</span>
+                    <span class="kpi-label">Genre Shows</span>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">4,527</span>
+                    <span class="kpi-label">Total Directors</span>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">1925</span>
+                    <span class="kpi-label">Start Year</span>
+                </div>
+                <div class="kpi-box">
+                    <span class="kpi-num">2021</span>
+                    <span class="kpi-label">End Year</span>
+                </div>
+            </div>
+
+            <!-- ── Results Summary ── -->
+            <h2>Results</h2>
+            <p>This dashboard provides a comprehensive analysis of the Netflix dataset, covering key metrics and trends related to shows and movies. The design uses a dark theme with prominent visuals to make the data easy to interpret.</p>
+
+            <!-- ── Middle Row ── -->
+            <h3>Visualizations — Middle Row</h3>
+            <p>Three bar charts that break down the data by key categories.</p>
+
+            <div class="viz-grid">
+                <div class="viz-card highlight">
+                    <h4>Rating by Total Shows</h4>
+                    <p>A horizontal bar chart showing distribution by maturity rating. <strong>TV-MA</strong> leads, followed by TV-14 and TV-PG — indicating a Netflix library geared predominantly toward mature audiences.</p>
+                </div>
+                <div class="viz-card highlight2">
+                    <h4>Genres by Total Shows</h4>
+                    <p><strong>Dramas &amp; International Movies</strong> is the top genre, followed by Documentaries and Stand-Up Comedy — reflecting a strong platform presence for non-fiction and comedic content.</p>
+                </div>
+                <div class="viz-card highlight3">
+                    <h4>Genres by Duration</h4>
+                    <p>Total duration per rating category — offering an alternative lens on content volume distribution that goes beyond simple title count.</p>
+                </div>
+            </div>
+
+            <!-- ── Bottom Row ── -->
+            <h3>Visualizations — Bottom Row</h3>
+            <p>Geographical distribution and time-series analysis providing deeper context.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card blue">
+                    <span class="feature-icon">🗺️</span>
+                    <h4>Total Shows by Country</h4>
+                    <p>A world map with darker red shading for higher content concentration. <strong>USA and India</strong> lead — reflecting Netflix's key markets and largest content libraries.</p>
+                </div>
+                <div class="feature-card teal">
+                    <span class="feature-icon">🍩</span>
+                    <h4>Movies vs. TV Shows</h4>
+                    <p>Donut chart breakdown: <strong>6.13K Movies (69.62%)</strong> vs. 2.68K TV Shows (30.38%). Netflix's library is firmly film-dominant.</p>
+                </div>
+                <div class="feature-card purple">
+                    <span class="feature-icon">📈</span>
+                    <h4>Total Shows by Release Year</h4>
+                    <p>Line chart from 1940–2020 showing slow growth until the 2000s, then explosive acceleration — peaking in <strong>2018 with 767 releases</strong>, reflecting Netflix's aggressive content strategy.</p>
+                </div>
+            </div>
+
+            <!-- ── Tools ── -->
+            <h3>Tools Used</h3>
+            <div class="tech-badges">
+                <span class="tech-badge badge-blue">Power BI Desktop</span>
+                <span class="tech-badge badge-purple">DAX</span>
+                <span class="tech-badge badge-teal">Power Query</span>
+                <span class="tech-badge badge-amber">Open-Source Dataset</span>
+                <span class="tech-badge badge-gray">Data Modelling</span>
+            </div>
+
+            <!-- ── Explore More ── -->
+            <h3>Explore More Projects</h3>
+            <ul class="actions">
+                <li><a href="Data Analysis.html" class="button primary">Excel</a></li>
+                <li><a href="PowerBI%20Data%20Analysis.html" class="button primary">Power BI</a></li>
+                <li><a href="SCM.html" class="button primary">SCM Analysis</a></li>
+                <li><a href="AIAgent.html" class="button primary">AI Projects</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>Disclaimer</h2>
+            <p>All the information given above is worked in-house.</p>
+            <ul class="actions">
+                <li><a href="generic.html" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>Jayadeepa.R.M, Home Address</dd>
+                <dt>Phone</dt>
+                <dd>+91 852X822XXX</dd>
+                <dt>Email</dt>
+                <dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/jddata360" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
+        <p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script data-goatcounter="https://jddata360.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
