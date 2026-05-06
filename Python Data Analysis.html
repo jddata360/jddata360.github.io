@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<!--
+    Jayadeepa.R.M — Portfolio
+    Based on Stellar by HTML5 UP | Redesigned by Claude
+-->
+<html>
+<head>
+    <title>Python Data Analysis — Jayadeepa.R.M</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="jd-shared.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+        /* ══════════════════════════════════════════
+           NAV — match main page exactly
+        ══════════════════════════════════════════ */
+        #nav ul li a {
+            text-transform: none !important;
+            font-size: 0.875rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0 !important;
+            white-space: nowrap !important;
+        }
+
+        /* ══════════════════════════════════════════
+           CALLOUT BOX
+        ══════════════════════════════════════════ */
+        .pb-callout {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            background: rgba(111,195,223,0.08);
+            border-left: 4px solid #6fc3df;
+            border-radius: 0 8px 8px 0;
+            padding: 1.2em 1.4em;
+            margin: 1em 0 1.5em;
+        }
+        .pb-callout-icon { font-size: 1.5em; line-height: 1.3; flex-shrink: 0; }
+        .pb-callout h4   { margin: 0 0 0.3em; font-size: 1rem; font-weight: 700; }
+        .pb-callout p    { margin: 0; font-size: 0.95em; line-height: 1.65; }
+
+        /* ══════════════════════════════════════════
+           PILL BADGES
+        ══════════════════════════════════════════ */
+        .pb-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin: 0.6em 0 1.6em;
+        }
+        .pb-badge {
+            display: inline-block;
+            padding: 0.35em 0.9em;
+            border-radius: 2em;
+            font-size: 0.8em;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .pb-badge.blue   { background: rgba(111,195,223,0.12); color: #6fc3df; border: 1px solid rgba(111,195,223,0.3); }
+        .pb-badge.purple { background: rgba(167,139,250,0.12); color: #a78bfa; border: 1px solid rgba(167,139,250,0.3); }
+        .pb-badge.teal   { background: rgba(52,211,153,0.12);  color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+        .pb-badge.amber  { background: rgba(251,191,36,0.12);  color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+        .pb-badge.red    { background: rgba(248,113,113,0.12); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
+        .pb-badge.orange { background: rgba(251,146,60,0.12);  color: #fb923c; border: 1px solid rgba(251,146,60,0.3); }
+        .pb-badge.gray   { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.15); }
+
+        /* ══════════════════════════════════════════
+           KPI GRID
+        ══════════════════════════════════════════ */
+        .pb-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        @media screen and (max-width: 736px) {
+            .pb-kpi-grid  { grid-template-columns: repeat(2, 1fr); }
+            .pb-viz-grid  { grid-template-columns: 1fr; }
+            .pb-feat-grid { grid-template-columns: 1fr; }
+            .pb-step-grid { grid-template-columns: 1fr; }
+        }
+        .pb-kpi-card {
+            background: rgba(111,195,223,0.08);
+            border: 1px solid rgba(111,195,223,0.3);
+            border-radius: 8px;
+            padding: 1.3em 1em 1.1em;
+            text-align: center;
+        }
+        .pb-kpi-card .pb-num {
+            display: block;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #6fc3df;
+            line-height: 1;
+            margin-bottom: 0.3em;
+        }
+        .pb-kpi-card .pb-lbl {
+            display: block;
+            font-size: 0.7em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.65;
+        }
+
+        /* ══════════════════════════════════════════
+           VIZ CARDS — 3 column
+        ══════════════════════════════════════════ */
+        .pb-viz-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        .pb-viz-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-top: 3px solid transparent;
+            border-radius: 8px;
+            padding: 1.2em 1.1em;
+        }
+        .pb-viz-card.c1 { border-top-color: #6fc3df; }
+        .pb-viz-card.c2 { border-top-color: #a78bfa; }
+        .pb-viz-card.c3 { border-top-color: #34d399; }
+        .pb-viz-card.c4 { border-top-color: #fbbf24; }
+        .pb-viz-card.c5 { border-top-color: #f87171; }
+        .pb-viz-card.c6 { border-top-color: #fb923c; }
+        .pb-viz-card h4 {
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0 0 0.6em;
+        }
+        .pb-viz-card p  { font-size: 0.9em; line-height: 1.65; margin: 0; }
+
+        /* ══════════════════════════════════════════
+           FEATURE CARDS — 3 column (bottom row)
+        ══════════════════════════════════════════ */
+        .pb-feat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+        }
+        .pb-feat-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px;
+            padding: 1.4em 1.2em;
+        }
+        .pb-feat-card .pb-icon { font-size: 1.7em; display: block; margin-bottom: 0.5em; }
+        .pb-feat-card h4       { font-size: 0.95em; font-weight: 700; margin: 0 0 0.4em; }
+        .pb-feat-card p        { font-size: 0.9em; line-height: 1.65; margin: 0; }
+
+        /* ══════════════════════════════════════════
+           PIPELINE STEPS
+        ══════════════════════════════════════════ */
+        .pb-step-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+            margin: 1em 0 2em;
+            counter-reset: step-counter;
+        }
+        .pb-step-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 10px;
+            padding: 1.4em 1.2em 1.2em;
+            position: relative;
+        }
+        .pb-step-card::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            top: -0.65em;
+            left: 1em;
+            background: #6fc3df;
+            color: #0d0d0f;
+            font-size: 0.72em;
+            font-weight: 800;
+            padding: 0.15em 0.55em;
+            border-radius: 2em;
+            letter-spacing: 0.05em;
+        }
+        .pb-step-card h4 { font-size: 0.9em; font-weight: 700; margin: 0.4em 0 0.5em; color: #6fc3df; }
+        .pb-step-card p  { font-size: 0.85em; line-height: 1.6; margin: 0; opacity: 0.8; }
+
+        /* ══════════════════════════════════════════
+           DATA SOURCE HIGHLIGHT BOX
+        ══════════════════════════════════════════ */
+        .pb-source-box {
+            background: rgba(52,211,153,0.07);
+            border: 1px solid rgba(52,211,153,0.25);
+            border-radius: 10px;
+            padding: 1.2em 1.5em;
+            margin: 1em 0 2em;
+            display: flex;
+            align-items: center;
+            gap: 1.2em;
+            flex-wrap: wrap;
+        }
+        .pb-source-box .pb-src-icon { font-size: 2em; flex-shrink: 0; }
+        .pb-source-box h4 { margin: 0 0 0.2em; font-size: 0.95em; font-weight: 700; color: #34d399; }
+        .pb-source-box p  { margin: 0; font-size: 0.88em; line-height: 1.6; opacity: 0.8; }
+        .pb-source-box a  { color: #6fc3df; }
+
+        /* ══════════════════════════════════════════
+           INSIGHT CALLOUT (amber variant)
+        ══════════════════════════════════════════ */
+        .pb-insight {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            background: rgba(251,191,36,0.07);
+            border-left: 4px solid #fbbf24;
+            border-radius: 0 8px 8px 0;
+            padding: 1.1em 1.3em;
+            margin: 1em 0 1.5em;
+        }
+        .pb-insight-icon { font-size: 1.4em; flex-shrink: 0; line-height: 1.3; }
+        .pb-insight h4   { margin: 0 0 0.25em; font-size: 0.9em; font-weight: 700; color: #fbbf24; }
+        .pb-insight p    { margin: 0; font-size: 0.88em; line-height: 1.65; opacity: 0.85; }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Data Analysis — Python</h1>
+        <p>US Flight Delay &amp; Cancellation Analysis (2019–2023)</p>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Introduction</a></li>
+            <li><a href="generic.html">Professional Experience</a></li>
+            <li><a href="Certifications2.html">Certifications</a></li>
+            <li><a href="Data Analysis.html" class="active">Data Analysis Projects</a></li>
+            <li><a href="SCM.html">SCM Analysis</a></li>
+            <li><a href="AIAgent.html">AI Projects</a></li>
+            <li><a href="Hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+        <section id="content" class="main">
+
+            <span class="image main">
+                <img src="images/python_flight_dashboard.png" alt="Python Flight Delay Dashboard" />
+            </span>
+
+            <!-- ── About ── -->
+            <h2>About the Data</h2>
+
+            <div class="pb-callout">
+                <div class="pb-callout-icon">🐍</div>
+                <div>
+                    <h4>Project Goal</h4>
+                    <p>After completing my Power BI Netflix project, I wanted to demonstrate that I could build the same quality of analysis entirely in Python — covering data ingestion, cleaning, transformation, KPI computation, and an interactive multi-page dashboard. I chose a real-world aviation dataset sourced directly from the US Bureau of Transportation Statistics (BTS), giving me 3 million+ rows of actual airline operations data across five years. This project showcases pandas for data engineering, Plotly for interactive visualisation, and Dash for a live, filterable web dashboard.</p>
+                </div>
+            </div>
+
+            <!-- Data Source -->
+            <div class="pb-source-box">
+                <div class="pb-src-icon">📡</div>
+                <div>
+                    <h4>Data Source — Bureau of Transportation Statistics (BTS) via Kaggle</h4>
+                    <p>Dataset: <a href="https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023" target="_blank">Flight Delay and Cancellation Dataset (2019–2023)</a> &nbsp;·&nbsp; 3,000,000 rows &nbsp;·&nbsp; 32 columns &nbsp;·&nbsp; Real US domestic flight records &nbsp;·&nbsp; Years: 2019 to 2023</p>
+                </div>
+            </div>
+
+            <p>This project is structured around the same four core questions I applied to the Netflix dashboard:</p>
+
+            <div class="pb-badges">
+                <span class="pb-badge blue">What is the data about?</span>
+                <span class="pb-badge purple">How can it be categorised?</span>
+                <span class="pb-badge teal">Are there dependencies within categories?</span>
+                <span class="pb-badge amber">What is the outcome?</span>
+            </div>
+
+            <!-- ── Python Pipeline ── -->
+            <h2>Python Analysis Pipeline</h2>
+            <p>The project follows a structured four-stage pipeline — the Python equivalent of Power Query → Data Model → DAX → Dashboard in Power BI.</p>
+
+            <div class="pb-step-grid">
+                <div class="pb-step-card">
+                    <h4>Data Ingestion</h4>
+                    <p>Used <code>glob</code> + <code>pandas</code> to load and concatenate multiple yearly CSV files into a single 3M-row DataFrame. Applied <code>usecols</code> to load only the 22 required columns, reducing memory usage significantly.</p>
+                </div>
+                <div class="pb-step-card">
+                    <h4>Data Cleaning</h4>
+                    <p>Parsed FL_DATE to datetime, coerced all numeric delay and distance columns, removed duplicates, dropped rows with null airline or date values. Separated cancelled flights from active flights for independent analysis.</p>
+                </div>
+                <div class="pb-step-card">
+                    <h4>Feature Engineering</h4>
+                    <p>Created derived columns: IS_DELAYED (ARR_DELAY &gt; 15 mins — FAA standard), YEAR, MONTH, MONTH_NAME, WEEKDAY, and ROUTE (ORIGIN → DEST). These drove all downstream KPIs and aggregations.</p>
+                </div>
+                <div class="pb-step-card">
+                    <h4>Dashboard (Dash)</h4>
+                    <p>Built a live interactive web dashboard using Plotly Dash with airline and year dropdowns. All 7 charts and 6 KPI cards update dynamically on filter selection — running at <code>localhost:8050</code>.</p>
+                </div>
+            </div>
+
+            <!-- ── Results ── -->
+            <h2>Results</h2>
+            <p>The dashboard delivers a comprehensive view of US domestic flight operations across 18 airlines, 7,771 routes, and five years — covering delay patterns, cancellation reasons, seasonal trends, and route performance.</p>
+
+            <!-- ── KPIs ── -->
+            <h3>Key Performance Indicators</h3>
+            <p>Six KPI cards at the top of the dashboard provide an immediate operational snapshot — all computed from the raw BTS data using pandas aggregations.</p>
+
+            <div class="pb-kpi-grid">
+                <div class="pb-kpi-card">
+                    <span class="pb-num">2.92M</span>
+                    <span class="pb-lbl">Total Active Flights</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">4.3 min</span>
+                    <span class="pb-lbl">Avg Arrival Delay</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">17.6%</span>
+                    <span class="pb-lbl">Delay Rate (&gt;15 min)</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">2.5%</span>
+                    <span class="pb-lbl">Cancellation Rate</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">18</span>
+                    <span class="pb-lbl">Total Airlines</span>
+                </div>
+                <div class="pb-kpi-card">
+                    <span class="pb-num">7,771</span>
+                    <span class="pb-lbl">Unique Routes</span>
+                </div>
+            </div>
+
+            <div class="pb-insight">
+                <div class="pb-insight-icon">💡</div>
+                <div>
+                    <h4>Key Insight</h4>
+                    <p>While the average arrival delay is just 4.3 minutes across all flights, 17.6% of flights are delayed by more than 15 minutes — the FAA's official threshold. This gap reveals how a small proportion of severely delayed flights skew the average, an insight only visible through proper segmentation.</p>
+                </div>
+            </div>
+
+            <!-- ── Visualizations Row 1 ── -->
+            <h3>Visualizations — Delay Analysis</h3>
+            <p>Three charts examining delay behaviour across airlines, causes, and time dimensions.</p>
+
+            <div class="pb-viz-grid">
+                <div class="pb-viz-card c1">
+                    <h4>Avg Arrival Delay by Airline</h4>
+                    <p>A colour-coded bar chart ranking all 18 airlines by average arrival delay in minutes. Reveals which carriers consistently underperform and which maintain strong on-time records — a direct operational benchmark.</p>
+                </div>
+                <div class="pb-viz-card c2">
+                    <h4>Delay Causes Breakdown</h4>
+                    <p>A donut chart splitting total delay minutes across five FAA-defined causes: <strong>Carrier, Weather, NAS/ATC, Security,</strong> and <strong>Late Aircraft</strong>. Late Aircraft and Carrier delays are the dominant contributors, together accounting for the majority of all delay time.</p>
+                </div>
+                <div class="pb-viz-card c3">
+                    <h4>Avg Delay by Day of Week</h4>
+                    <p>Bar chart showing average arrival delay by weekday. <strong>Thursday and Friday</strong> consistently show the highest delays — driven by peak business travel demand and congestion cascading through the network by week's end.</p>
+                </div>
+            </div>
+
+            <!-- ── Visualizations Row 2 ── -->
+            <h3>Visualizations — Trends &amp; Operations</h3>
+            <p>Time-series, route performance, and cancellation analysis providing broader operational context.</p>
+
+            <div class="pb-viz-grid">
+                <div class="pb-viz-card c4">
+                    <h4>Monthly Flight Trend by Year</h4>
+                    <p>Multi-year line chart showing monthly flight volumes from 2019–2023. The <strong>2020 collapse</strong> is starkly visible — a dramatic drop driven by the COVID-19 pandemic — followed by a steady recovery through 2022 and 2023, reflecting the industry's resilience.</p>
+                </div>
+                <div class="pb-viz-card c5">
+                    <h4>Top 10 Busiest Routes</h4>
+                    <p>Horizontal bar chart of the 10 highest-volume routes, colour-coded by average delay. Short-haul corridors such as <strong>LAX → SFO</strong> and <strong>JFK → LGA</strong> dominate — with some of the highest delay rates despite short distances, highlighting airport congestion as a key factor.</p>
+                </div>
+                <div class="pb-viz-card c6">
+                    <h4>Cancellation Reasons</h4>
+                    <p>Donut chart categorising all 75,767 cancellations by FAA code: Carrier (A), Weather (B), NAS/ATC (C), Security (D). <strong>Weather</strong> and <strong>Carrier</strong> issues account for the vast majority — with weather cancellations spiking sharply in winter months.</p>
+                </div>
+            </div>
+
+            <!-- ── Bottom Row ── -->
+            <h3>Visualizations — Analytical Deep Dive</h3>
+            <p>An additional scatter analysis that goes beyond standard dashboards to test a hypothesis.</p>
+
+            <div class="pb-feat-grid">
+                <div class="pb-feat-card">
+                    <span class="pb-icon">✈️</span>
+                    <h4>Does Distance Affect Delay?</h4>
+                    <p>Scatter plot of 8,000 sampled flights plotting distance (miles) against arrival delay (mins), coloured by airline, with an OLS trendline. The analysis shows <strong>no strong correlation</strong> — delays are driven by congestion and carrier operations, not flight length.</p>
+                </div>
+                <div class="pb-feat-card">
+                    <span class="pb-icon">🔽</span>
+                    <h4>Interactive Filters</h4>
+                    <p>The Dash dashboard includes <strong>Airline</strong> and <strong>Year</strong> dropdown filters. All 7 charts and all 6 KPI cards update simultaneously on selection — allowing drill-down from fleet-wide analysis to individual airline performance in a specific year.</p>
+                </div>
+                <div class="pb-feat-card">
+                    <span class="pb-icon">📊</span>
+                    <h4>Data Scale</h4>
+                    <p>Processed <strong>3,000,000 raw rows</strong> from five CSV files. After cleaning: 2,920,845 active flights and 75,767 cancelled flights retained for analysis. All computations run in-memory using pandas, with chart rendering via Plotly's WebGL engine for performance.</p>
+                </div>
+            </div>
+
+            <!-- ── Tools ── -->
+            <h3>Tools &amp; Libraries Used</h3>
+            <div class="pb-badges">
+                <span class="pb-badge blue">Python 3</span>
+                <span class="pb-badge purple">pandas</span>
+                <span class="pb-badge teal">Plotly</span>
+                <span class="pb-badge amber">Dash</span>
+                <span class="pb-badge red">NumPy</span>
+                <span class="pb-badge orange">glob</span>
+                <span class="pb-badge gray">BTS / Kaggle Dataset</span>
+                <span class="pb-badge gray">Anaconda</span>
+            </div>
+
+            <!-- ── Explore More ── -->
+            <h3>Explore More Projects</h3>
+            <ul class="actions">
+                <li><a href="Data Analysis.html"           class="button primary">Excel</a></li>
+                <li><a href="PowerBI%20Data%20Analysis.html" class="button primary">Power BI</a></li>
+                <li><a href="Python%20Data%20Analysis.html"  class="button primary">Python</a></li>
+                <li><a href="SCM.html"                     class="button primary">SCM Analysis</a></li>
+                <li><a href="AIAgent.html"                 class="button primary">AI Projects</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>Disclaimer</h2>
+            <p>All the information given above is worked in-house.</p>
+            <ul class="actions">
+                <li><a href="generic.html" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <dl class="alt">
+                <dt>Address</dt>
+                <dd>Jayadeepa.R.M, Home Address</dd>
+                <dt>Phone</dt>
+                <dd>+91 852X822XXX</dd>
+                <dt>Email</dt>
+                <dd><a href="mailto:jayadeepa.r.murugesan@gmail.com">jayadeepa.r.murugesan@gmail.com</a></dd>
+            </dl>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jayadeepa-r-murugesan-981b22199/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/jddata360" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+            </ul>
+        </section>
+        <p class="copyright">&copy; jayadeepa1509: <a href="https://instagram.com/jayadeepa1509">@jayadeepa1509</a></p>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script data-goatcounter="https://jddata360.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
